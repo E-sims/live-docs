@@ -1,3 +1,4 @@
+import { ModeToggle } from '@/components/ThemeToggle'
 import { Button } from '@/components/ui/button'
 import {
   BrainCogIcon,
@@ -52,7 +53,10 @@ const features = [
 export default function Home() {
   return (
     <main className="flex-1 overflow-scroll p-2 lg:p-5 bg-gradient-to-bl from-white to-primary">
-      <div className="bg-white py-24 sm:py-32 rounded-md drop-shadow-lg">
+      <div className="bg-background py-24 sm:py-32 rounded-md drop-shadow-lg relative">
+        <div className="flex w-fit absolute top-4 right-4">
+          <ModeToggle />
+        </div>
         <div className="flex flex-col justify-center items-center mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="text-base font-semibold tracking-tight leading-7 text-primary">
@@ -61,7 +65,7 @@ export default function Home() {
             <p className="mt-2 text-3xl font-bold tracking-tight sm:text-6xl">
               Transform Your PDFs into Interactive Conversations
             </p>
-            <p className="mt-6 text-lg leading-8 text-zinc-600">
+            <p className="mt-6 text-lg leading-8 text-secondary-foreground">
               Introducing{' '}
               <span className="font-bold text-primary">Live Docs</span>
               <br />
@@ -87,7 +91,7 @@ export default function Home() {
               className="mv-[-0%] rounded-xl shadow-2xl ring-1 ring-ring/10"
             />
             <div aria-hidden="true" className="relative">
-              <div className="absolute bottom-0 -inset-x-32 bg-gradient-to-t from-white/95 pt-[5%]" />
+              <div className="absolute bottom-0 -inset-x-32 bg-gradient-to-t from-background/95 pt-[5%]" />
             </div>
           </div>
         </div>
@@ -101,7 +105,9 @@ export default function Home() {
                     className="absolute left-1 top-1 h-5 w-5 text-primary"
                   />
                 </dt>
-                <dd>{feature.description}</dd>
+                <dd className="text-secondary-foreground">
+                  {feature.description}
+                </dd>
               </div>
             ))}
           </dl>
