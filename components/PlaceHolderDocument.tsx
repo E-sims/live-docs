@@ -17,7 +17,7 @@ function PlaceHolderDocument() {
       onClick={handleClick}
       className="flex flex-col items-center gap-y-2 w-64 h-80 rounded-xl border border-border bg-secondary drop-shadow-md text-secondary-foreground"
     >
-      <PlusCircleIcon className="h-16 w-16" />
+      <PlusCircleIcon strokeWidth="1.2" className="h-16 w-16" />
       <p>Add a new document</p>
     </Button>
   )

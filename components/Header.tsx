@@ -8,13 +8,13 @@ type Props = {}
 
 function Header({}: Props) {
   return (
-    <div className="flex p-4 border-b border-border items-center justify-between">
+    <div className="flex p-4 border-b border-border items-center justify-between text-foreground mx-auto w-full max-w-[90rem]">
       <div className="flex items-center gap-x-4">
         <Link
           href="/dashboard"
           className="text-2xl font-semibold tracking-tight"
         >
-          Live<span className="text-primary">Docs</span>
+          Live<span className="text-primary">DocX</span>
         </Link>
         <ModeToggle />
       </div>
