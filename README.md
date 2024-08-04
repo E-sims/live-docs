@@ -1,6 +1,8 @@
-# LiveDocX - Your Collaborative Document Platform
+# LiveDocX - Your AI Collaborative Document Platform :+1:
 
 LiveDocX is a web application that allows users to upload, view, and collaborate on PDF documents. It's built with Next.js, Firebase, and Clerk for a seamless and secure experience.
+
+![LiveDocX Screenshot](./public/images/homepage-screenshot.webp)
 
 ## Features
 
@@ -15,7 +17,7 @@ LiveDocX is a web application that allows users to upload, view, and collaborate
 **1. Clone the repository:**
 
 ```bash
-  git clone https://github.com/your-username/live-docs.git
+  git clone https://github.com/E-sims/live-docs.git
 ```
 
 **2. Install dependencies:**

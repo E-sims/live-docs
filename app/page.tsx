@@ -90,7 +90,7 @@ export default function Home() {
               alt="app screenshot"
               width={3122}
               height={1958}
-              className="mv-[-0%] rounded-xl shadow-2xl ring-1 ring-ring/10"
+              className="mv-[-0%] rounded-xl shadow-2xl ring-1 ring-border"
             />
             <div aria-hidden="true" className="relative">
               <div className="absolute bottom-0 -inset-x-32 bg-gradient-to-t from-background/95 pt-[5%]" />
