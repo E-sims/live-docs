@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LiveDocX - Your Collaborative Document Platform
+
+LiveDocX is a web application that allows users to upload, view, and collaborate on PDF documents. It's built with Next.js, Firebase, and Clerk for a seamless and secure experience.
+
+## Features
+
+- **Upload PDFs:** Easily upload your PDF documents to LiveDocX.
+- **View PDFs:** View your uploaded PDFs with a clean and intuitive interface.
+- **Collaboration:** Coming soon!
+- **Secure Storage:** Your documents are securely stored on Firebase.
+- **User Authentication:** Sign up and log in with Clerk for a personalized experience.
 
 ## Getting Started
 
-First, run the development server:
+**1. Clone the repository:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/your-username/live-docs.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd live-docs
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**3. Set up Firebase:**
 
-## Learn More
+- Create a new Firebase project.
+- Enable the following Firebase services:
+  - Authentication
+  - Firestore
+  - Storage
+- Create a `.env.local` file in the root directory and add the following environment variables:
+  ```
+    NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=YOUR_FIREBASE_STORAGE_BUCKET
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=YOUR_FIREBASE_MESSAGING_SENDER_ID
+    NEXT_PUBLIC_FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=YOUR_FIREBASE_MEASUREMENT_ID
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+**4. Set up Clerk:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Create a new Clerk account.
+- Create a new application in Clerk.
+- Add the following environment variables to the `.env.local` file:
+  ```
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=YOUR_CLERK_PUBLISHABLE_KEY
+    NEXT_PUBLIC_CLERK_SECRET_KEY=YOUR_CLERK_SECRET_KEY
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**5. Run the development server:**
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Acknowledgements
+
+- Next.js
+- Firebase
+- Clerk
+- React PDF
+- Lucide Icons
+- Shadcn

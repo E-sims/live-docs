@@ -11,6 +11,8 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
+import screenshot from '@/public/images/live-docx-screenshot.webp'
+
 const features = [
   {
     name: 'Store your PDF Documents',
@@ -62,7 +64,7 @@ export default function Home() {
             <h2 className="text-base font-semibold tracking-tight leading-7 text-primary">
               Your Interactive Document Companion
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight sm:text-6xl">
+            <p className="mt-2 text-foreground text-3xl font-bold tracking-tight sm:text-6xl">
               Transform Your PDFs into Interactive Conversations
             </p>
             <p className="mt-6 text-lg leading-8 text-secondary-foreground">
@@ -84,10 +86,10 @@ export default function Home() {
         <div className="relative overflow-hidden pt-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Image
-              src="https://i.imgur.com/VciRSTI.jpeg"
+              src={screenshot}
               alt="app screenshot"
-              width={2432}
-              height={1442}
+              width={3122}
+              height={1958}
               className="mv-[-0%] rounded-xl shadow-2xl ring-1 ring-ring/10"
             />
             <div aria-hidden="true" className="relative">
