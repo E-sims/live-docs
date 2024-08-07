@@ -15,17 +15,19 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Icons } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
+import LogoMark from '@/components/LogoMark'
 
 export default function SignUpPage() {
   return (
-    <div className="grid w-full grow items-center px-4 sm:justify-center">
+    <div className="grid w-full grow items-center px-4 sm:justify-center bg-gradient-to-r from-background to-primary">
       <SignUp.Root>
         <Clerk.Loading>
           {(isGlobalLoading) => (
             <>
               <SignUp.Step name="start">
                 <Card className="w-full sm:w-96">
-                  <CardHeader>
+                  <CardHeader className="flex flex-col items-center justify-center gap-y-2">
+                    <LogoMark />
                     <CardTitle>Create your account</CardTitle>
                     <CardDescription>
                       Welcome! Please fill in the details to get started.

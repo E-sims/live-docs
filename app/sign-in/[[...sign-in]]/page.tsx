@@ -14,20 +14,21 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Icons } from '@/components/ui/icons'
-import { cn } from '@/lib/utils'
+import LogoMark from '@/components/LogoMark'
 
 export default function SignInPage() {
   return (
-    <div className="grid w-full grow items-center px-4 sm:justify-center">
+    <div className="grid w-full grow items-center px-4 sm:justify-center bg-gradient-to-r from-background to-primary">
       <SignIn.Root>
         <Clerk.Loading>
           {(isGlobalLoading) => (
             <>
               <SignIn.Step name="start">
                 <Card className="w-full sm:w-96">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold tracking-tight">
-                      Sign in to Live<span className="text-primary">Docs</span>
+                  <CardHeader className="flex flex-col items-center justify-center gap-y-2">
+                    <CardTitle className="text-2xl font-semibold tracking-tight text-center">
+                      <LogoMark />
+                      Sign in
                     </CardTitle>
                     <CardDescription>
                       Welcome back! Please sign in to continue
