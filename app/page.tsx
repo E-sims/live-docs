@@ -68,13 +68,12 @@ export default function Home() {
               Transform Your PDFs into Interactive Conversations
             </p>
             <p className="mt-6 text-lg leading-8 text-secondary-foreground">
-              Introducing{' '}
-              <span className="font-bold text-primary">Live Docs</span>
+              Introducing <span className="font-bold text-primary">Doxxy</span>
               <br />
               <br /> Upload your document, and our chatbot will answer
               questions, summarize content, and answer all your Qestions. Ideal
-              for everyone, <span className="text-primary">Live Docs</span>{' '}
-              turns static documents into{' '}
+              for everyone, <span className="text-primary">Doxxy</span> turns
+              static documents into{' '}
               <span className="font-bold">dynamic conversations</span>,
               enhancing productivity 10x fold faster.
             </p>

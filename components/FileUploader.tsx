@@ -10,11 +10,16 @@ import {
   SaveIcon,
 } from 'lucide-react'
 import useUpload, { StatusText } from '@/hooks/useUpload'
+import useSubscription from '@/hooks/useSubscription'
 import { useRouter } from 'next/navigation'
+import { useToast } from '@/components/ui/use-toast'
+import UpgradeButton from './UpgradeButton'
 
 function FileUploader() {
   const { progress, status, fileId, handleUpload } = useUpload()
+  const { isOverFileLimit, filesLoading } = useSubscription()
   const router = useRouter()
+  const { toast } = useToast()
 
   useEffect(() => {
     if (fileId) {
@@ -28,13 +33,22 @@ function FileUploader() {
 
       const file = acceptedFiles[0]
       if (file) {
-        await handleUpload(file)
+        if (!isOverFileLimit && !filesLoading) {
+          await handleUpload(file)
+        } else {
+          toast({
+            variant: 'default',
+            title: '😬 Free Plan File Limit Reached',
+            description: 'Please upgrade to add more documents',
+            action: <UpgradeButton />,
+          })
+        }
       } else {
         // do nothing...
         // toast...
       }
     },
-    [handleUpload]
+    [handleUpload, isOverFileLimit, filesLoading, toast]
   )
 
   const statusIcons: {

@@ -3,18 +3,24 @@ import Link from 'next/link'
 import { Button } from './ui/button'
 import { FilePlus2 } from 'lucide-react'
 import { ModeToggle } from './ThemeToggle'
+import UpgradeButton from './UpgradeButton'
+import Image from 'next/image'
+import logoWordmark from '@/public/images/svgs/wordmark.svg'
+import LogoMark from '@/components/LogoMark'
 
 type Props = {}
 
 function Header({}: Props) {
   return (
     <div className="flex p-4 border-b border-border items-center justify-between text-foreground mx-auto w-full max-w-[90rem]">
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center justify-center gap-x-2">
         <Link
           href="/dashboard"
           className="text-2xl font-semibold tracking-tight"
         >
-          Live<span className="text-primary">DocX</span>
+          <div className="flex max-h-10 w-fit">
+            <LogoMark />
+          </div>
         </Link>
         <ModeToggle />
       </div>
@@ -35,6 +41,7 @@ function Header({}: Props) {
               <FilePlus2 />
             </Link>
           </Button>
+          <UpgradeButton />
           <UserButton />
         </div>
       </SignedIn>

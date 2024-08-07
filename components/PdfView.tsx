@@ -30,8 +30,8 @@ function PdfView({ url }: { url: string }) {
   }
 
   return (
-    <div className="w-full h-full grid grid-cols-1 items-center justify-center p-2">
-      <div className="flex mx-auto sticky top-1 z-50 bg-background/50 backdrop-filter backdrop-blur-lg bg-opacity-50 p-2 rounded-lg border border-border">
+    <div className="w-full h-full grid grid-cols-1 p-2">
+      <div className="flex h-fit mx-auto sticky top-1 z-50 bg-background/50 backdrop-filter backdrop-blur-lg bg-opacity-50 p-2 rounded-lg border border-border">
         <div className="max-w-6xl px-2 grid grid-cols-6 gap-2">
           <Button
             variant="outline"
@@ -100,7 +100,7 @@ function PdfView({ url }: { url: string }) {
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page
-            className="shadow-sm h-full w-full flex items-center justify-center mx-auto"
+            className="shadow-sm h-full w-full mx-auto flex items-center justify-center"
             scale={scale}
             pageNumber={pageNumber}
           />
