@@ -54,12 +54,18 @@ function FileUploader() {
   const statusIcons: {
     [key in StatusText]: JSX.Element
   } = {
-    [StatusText.UPLOADING]: <RocketIcon className="h-20 w-20 text-primary" />,
-    [StatusText.UPLOADED]: (
-      <CheckCircleIcon className="h-20 w-20 text-primary" />
+    [StatusText.UPLOADING]: (
+      <RocketIcon className="h-20 w-20 text-primary animate-bounce" />
     ),
-    [StatusText.SAVING]: <SaveIcon className="h-20 w-20 text-primary" />,
-    [StatusText.GENERATING]: <HammerIcon className="h-20 w-20 text-primary" />,
+    [StatusText.UPLOADED]: (
+      <CheckCircleIcon className="h-20 w-20 text-primary animate-bounce" />
+    ),
+    [StatusText.SAVING]: (
+      <SaveIcon className="h-20 w-20 text-primary animate-bounce" />
+    ),
+    [StatusText.GENERATING]: (
+      <HammerIcon className="h-20 w-20 text-primary animate-bounce" />
+    ),
   }
 
   const { getRootProps, getInputProps, isDragActive, isFocused, isDragAccept } =
